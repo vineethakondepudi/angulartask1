@@ -1,0 +1,13 @@
+<form [formGroup]="postForm" >
+    <h1>Student form</h1>
+    <hr>
+    Sid: <br>
+    <input type="text" pInputText formControlName="sid"><br><br>
+    Sname: <br>
+    <input type="text" pInputText formControlName="sname"><br><br>
+    Deparment: <br>
+    <input type="text" pInputText formControlName="department"><br><br>
+    Phonenumber: <br>
+    <input type="text" pInputText formControlName="phonenumber"><br><br>
+    <button (click)="submit()">Login</button>
+</form>

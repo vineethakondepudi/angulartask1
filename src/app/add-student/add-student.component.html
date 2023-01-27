@@ -1,0 +1,70 @@
+<!--insertform  (post method) -->
+
+<h1 style="color:rgb(75, 84, 207)">Add Empolyees</h1>
+<button pButton (click)="open()">AddClick</button>
+
+    <div class="form" ><b>
+    <form *ngIf="show"  [formGroup]="addStudent" >
+        Eid: <br>
+        <input type="text" pInputText formControlName="sid"><br><br>
+        Ename: <br>
+        <input type="text" pInputText formControlName="sname"><br><br>
+        Department: <br>
+        <input type="text" pInputText formControlName="department"><br><br>
+        Phonenumber: <br>
+        <input type="text" pInputText formControlName="phonenumber"><br><br>
+        <button pButton type="button" label="Submit" (click)="saveDate()"></button>
+    </form>
+</b>
+</div>
+
+
+
+    <!-- table  (get method and delete method)-->
+    <br><br><h1 style="color:rgb(75, 84, 207)">Employee List</h1>
+<p-table [value]="studentData">
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="color:rgb(140, 96, 182)">Eid</th>
+            <th style="color:rgb(140, 96, 182)">Ename</th>
+            <th style="color:rgb(140, 96, 182)">Deparment</th>
+            <th style="color:rgb(140, 96, 182)">Phonenumber</th>
+            <th style="color:rgb(140, 96, 182)">Action</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{product.sid}}</td>
+            <td>{{product.sname}}</td>
+            <td>{{product.department}}</td>
+            <td>{{product.phonenumber}}</td>
+            <td>
+                <i (click)="deleteStudent(product.sid)" class="fa fa-trash"></i>&nbsp;
+                <i (click)="edit(product)" class="fa fa-edit"></i>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+<br><br>
+
+
+    <!-- updateform (put method)-->
+    <div class="form" >
+        <b>
+    <form [formGroup]="postForm" *ngIf="close">
+        <h1 style="color:rgb(75, 84, 207)">Update form</h1>
+        Eid: <br>
+        <input type="text" pInputText formControlName="sid"><br><br>
+        Ename: <br>
+        <input type="text" pInputText formControlName="sname" ><br><br>
+        Department: <br>
+        <input type="text" pInputText formControlName="department" ><br><br>
+        Phonenumber: <br>
+        <input type="text" pInputText formControlName="phonenumber" ><br><br>
+        <button pButton (click)="submit()">Update</button>
+    </form>
+    </b>
+</div>
+
+
+   

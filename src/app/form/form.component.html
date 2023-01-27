@@ -1,0 +1,7 @@
+<form action="">
+    Uname:
+    <input type="text" ngModel name="uname" minlength="8" #un="ngModel"><br><br>
+    Lname:
+    <input type="text" ngModel name="passwd" minlength="8" #p="ngModel"><br><br>
+    <button (click)="show(un,p)">submit</button>
+</form>

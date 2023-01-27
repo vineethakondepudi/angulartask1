@@ -1,0 +1,17 @@
+<!-- Parent to child -->
+<!-- <div>
+    <h1>Parent Component</h1>
+    <input type="text" [(ngModel)]='parenttochild'>
+</div>
+<app-child1 [name]="parenttochild"></app-child1> -->
+
+
+
+
+<!-- Child to parent -->
+<div>
+    <h1>Parent Component</h1>
+
+    <p>{{childtoparent}}</p>
+</div>
+<app-child1 (childtoparentEmitter)="receivedmsg($event)"></app-child1>

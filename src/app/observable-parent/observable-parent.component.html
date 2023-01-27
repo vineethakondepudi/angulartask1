@@ -1,0 +1,24 @@
+<h1 style="color:rgb(75, 84, 207)">Employee List</h1>
+<p-table [value]="studentData">
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="color:rgb(140, 96, 182)">Eid</th>
+            <th style="color:rgb(140, 96, 182)">Ename</th>
+            <th style="color:rgb(140, 96, 182)">Deparment</th>
+            <th style="color:rgb(140, 96, 182)">Phonenumber</th>
+            <th style="color:rgb(140, 96, 182)">Action</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{product.sid}}</td>
+            <td>{{product.sname}}</td>
+            <td>{{product.department}}</td>
+            <td>{{product.phonenumber}}</td>
+            <td>
+                <i (click)="deleteStudent(product.sid)" class="fa fa-trash"></i>&nbsp;
+                <i (click)="edit(product)" class="fa fa-edit"></i>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>

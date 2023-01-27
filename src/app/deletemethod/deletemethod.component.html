@@ -1,0 +1,22 @@
+
+<p>Vineetha</p>
+<table border="2px">
+    <tr>
+        <th>Sid</th>
+        <th>Sname</th>
+        <th>Department</th>
+        <th>Phonenumber</th>
+    
+    </tr>
+    <tr *ngFor="let m of result">
+    <td>{{m.sid}}</td>  
+    <td>{{m.sname}}</td>
+    <td>{{m.department}}</td>
+    <td>{{m.phonenumber}}</td>  
+    <td>
+  <i (click)="deleteStudent(m.sid)" class="fa fa-trash"></i>&nbsp;
+<i (click)="edit()" class="fa fa-edit"></i>
+    </td>
+    
+    </tr>
+</table>

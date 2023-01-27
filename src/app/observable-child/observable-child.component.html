@@ -1,0 +1,16 @@
+<div class="form" >
+    <b>
+<form [formGroup]="postForm" >
+    <h1 style="color:rgb(75, 84, 207)">Update form</h1>
+    Eid: <br>
+    <input type="text" pInputText formControlName="sid"><br><br>
+    Ename: <br>
+    <input type="text" pInputText formControlName="sname" ><br><br>
+    Department: <br>
+    <input type="text" pInputText formControlName="department" ><br><br>
+    Phonenumber: <br>
+    <input type="text" pInputText formControlName="phonenumber" ><br><br>
+    <button pButton (click)="submit()">Update</button>
+</form>
+</b>
+</div>

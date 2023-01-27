@@ -1,0 +1,38 @@
+<h1 style="color:rgb(75, 84, 207)">Add Empolyees</h1>
+
+
+    <div class="form" ><b>
+    <form  [formGroup]="addStudent" >
+        Eid: <br>
+        <input type="text" pInputText formControlName="sid"><br><br>
+        Ename: <br>
+        <input type="text" pInputText formControlName="sname"><br><br>
+        Department: <br>
+        <input type="text" pInputText formControlName="department"><br><br>
+        Phonenumber: <br>
+        <input type="text" pInputText formControlName="phonenumber"><br><br>
+        <button pButton type="button" label="Submit" (click)="saveDate()"></button>
+    </form>
+</b>
+</div>
+
+
+<!-- <div>
+    <table>
+        <tr>
+            <td>{{Sid}}</td>
+            <td>{{Sname}}</td>
+            <td>{{Department}}</td>
+            <td>{{Phonenumber}}</td>
+        </tr>
+        <tr *ngFor="let m of studentss">
+            <td>{{m.id}}</td>
+            <td>{{m.name}}</td>
+            <td>{{m.dept}}</td>
+            <td>{{pn}}</td>
+        </tr>
+    </table>
+</div> 
+
+
+<button (click)="show()">submit</button> -->

@@ -1,0 +1,23 @@
+
+{
+    "barChartVertical": {
+        "labels": [
+            "30",
+            "60",
+            "90",
+            "120+"
+        ],
+        "datasets": [
+            {
+                "label": ["January","February"],
+                "backgroundColor": "pink",
+                "fill":true,
+                "data": [
+                    11.2,
+                    6.5,
+                    5.2,
+                    3.2
+                ]
+            }
+        ]
+    }}

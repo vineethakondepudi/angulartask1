@@ -1,0 +1,25 @@
+<!-- <h1 *ngIf="show">vineetha</h1> -->
+
+<!-- <table border="1">
+    <tr *ngFor="let m of names">
+        <td>{{m}}</td>
+
+    </tr>
+</table> -->
+
+<!-- <div [ngSwitch]="op">
+<div *ngSwitchCase="'+' ">{{num1+num2}}</div>
+<div *ngSwitchCase="'-' ">{{num1-num2}}</div>
+<div *ngSwitchCase="'*' ">{{num1*num2}}</div>
+<div *ngSwitchCase="'/' ">{{num1/num2}}</div>
+</div> -->
+
+<h1 *ngIf="colors">
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red' " style="color: red;">Red Color</div>
+    <div *ngSwitchCase="'green' " style="color:green">Green Color</div>
+    <div *ngSwitchCase="'blue' " style="color:blue">Blue Color</div>
+    <div *ngSwitchCase="'orange' " style="color:orange">Orange Color</div>
+    <div *ngSwitchDefault="" style="color:blueviolet">Default</div>
+</div>
+</h1>

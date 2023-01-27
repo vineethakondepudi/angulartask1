@@ -1,0 +1,20 @@
+<p>httpform works!</p>
+<div>
+
+<div>
+    <table id="products">
+     <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Married</th>
+        <th></th>
+     </tr>
+     <tr *ngFor="let x of allproducts;index as i">
+        <td>{{i + 1}}</td>
+        <td>{{x.name}}</td>
+        <td>{{x.salry}}</td>
+        <td>{{x.married}}</td>
+     </tr>
+    </table>
+</div>

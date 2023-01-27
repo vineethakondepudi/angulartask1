@@ -1,0 +1,12 @@
+<p>life-cycle-hook-parent works!</p>
+<!-- <input type="text" [(ngModel)]="parentToChild">
+<app-life-cycle-hook-child [data]="parentToChild"></app-life-cycle-hook-child> -->
+
+
+
+<input type="text" (blur)="parentToChild($event)">
+<h3>Simple Form</h3>
+<p>Product Name: <input type="text" [(ngModel)]="name"></p>
+<p>Product Price: <input type="text" [(ngModel)]="price"></p>
+<p><button (click)="updateProduct()">updateProduct</button></p>
+<app-life-cycle-hook-child [parent]="data" [product]="product"></app-life-cycle-hook-child>

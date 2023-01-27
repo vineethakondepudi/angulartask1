@@ -1,0 +1,21 @@
+.container{
+    width: 640px;
+    margin: 30px auto;
+    padding: 30px 40px;
+    background-color: #f7f7f7;
+    font-family: 'Lucida Sans';
+}
+.user-div{
+    display: flex;
+    margin: 5px 50px;
+    }
+.user-name{
+    width: 2px;
+    padding: 10px 160px;
+    background-color: #eee;
+}    
+.user-skillset{
+    width:20px;
+    padding: 10px 80px;
+    background-color: #FADBDB;
+}

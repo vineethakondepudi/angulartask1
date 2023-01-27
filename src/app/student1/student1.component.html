@@ -1,0 +1,40 @@
+<h1>student1 works!</h1>
+<!-- <div>
+<form action="" (ngSubmit)="submit()">
+    <label for="">Name:</label>
+    <input type="text" ngModel><br><br>
+
+    <label for="">Salary:</label>
+    <input type="text" ngModel><br><br>
+
+    <label for="">Married:</label>
+    <input type="text" ngModel><br><br>
+
+    <input type="submit" value="add products"><br><br>
+</form>
+</div> -->
+
+
+<!-- <button (click)="Onenroll()">Enroll</button> -->
+
+
+
+<div>
+<table >
+    <tr>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>married</th>
+    </tr>
+    <tr *ngFor="let x of students">
+           <td>{{x.name}}</td>
+           <td>{{x.salary}}</td>
+           <td>{{x.married}}</td>
+           <!-- <td><button (click)="delete(x.name)">Delete</button></td>
+           <td><button (click)="edit(x.name)">Edit</button></td> -->
+    </tr>
+</table>
+<br>
+<button (click)="submit()">click</button>
+<!-- <h1>{{errormsg}}</h1> -->
+</div>

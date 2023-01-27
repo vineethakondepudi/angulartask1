@@ -1,0 +1,14 @@
+table,tr,th,td{
+    border: 2px outset rebeccapurple;
+    color: rgb(19, 200, 200);
+    background-color: rgb(232, 234, 241);
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif    ;
+}
+
+
+.form{
+    color: rgb(75, 64, 140);
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif    ;
+}

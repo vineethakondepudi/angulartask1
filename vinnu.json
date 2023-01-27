@@ -1,0 +1,19 @@
+{
+  "vinnu": [
+    {
+      "year": 1,
+      "amount": 5,
+      "color": "red"
+    },
+    {
+      "year": 2016,
+      "amount": 6,
+      "color": "green"
+    },
+    {
+      "year": 2017,
+      "amount": 7000,
+      "color": "blue"
+    }
+  ]
+}
