@@ -27,32 +27,30 @@ export class ObservableComponent{
 
  
 //1.diff bw promises and observables
-//   promise =new Promise((resolved)=>{
-//     setTimeout(()=>{
-//       resolved("Hello vineetha")
-//       resolved("Hello vineetha")
-//       resolved("Hello vineetha")
-//       resolved("Hello vineetha")
-//     },2000)
-//     }).then((d)=>{
-//     console.log(d);
-    
-//   })
-
-// myObservable=new Observable((observer)=>{
+// promise=new Promise((resolved)=>{
 //   setTimeout(()=>{
-//     observer.next("Hello koti")
-//     observer.next("Hello koti")
-//     observer.next("Hello koti")
-//     observer.next("Hello koti")
+//  resolved("First");
+//  resolved("Second");
+//  resolved("Third")
+//   },2000)
+// })
+// .then((d)=>{
+//   console.log(d);
+//   })
+   
+
+// myObservable= new Observable((observer)=>{
+//   setTimeout(()=>{
+//     observer.next("First");
+//     observer.next("Second");
+//     observer.next("Third");
+//     observer.next("Fourth")
 //   },2000)
   
-// }).subscribe((d)=>{
-//   console.log(d);
-  
 // })
- 
-
+// .subscribe((d)=>{
+//   console.log(d);
+//   })
 //2.Observables are unicast
 // myObservable=new Observable((observer)=>{
 //   observer.next(Math.random())
@@ -66,16 +64,15 @@ export class ObservableComponent{
 // data3=this.myObservable.subscribe((d)=>{console.log(d);})
 
 //3.Subject is multicast
-// myObservable=new Subject()
+// mySubject=new Subject();
 // //Subscriber1
-// data1=this.myObservable.subscribe(d=>console.log(d))
+// data1=this.mySubject.subscribe((d)=>console.log(d))
 // //Subscriber2
-// data2=this.myObservable.subscribe(d=>console.log(d))
+// data2=this.mySubject.subscribe((d)=>console.log(d))
 // //Subscriber3
-// data3=this.myObservable.subscribe(d=>console.log(d))
-// data=this.myObservable.next(Math.random())
+// data3=this.mySubject.subscribe((d)=>console.log(d))
 
-
+// data=this.mySubject.next(Math.random())
 
 //4.Subjects are acts like data provider and data consumer  ex:data consumer
 
@@ -95,11 +92,11 @@ export class ObservableComponent{
 
 // mySubject=new Subject()
 
-//Subscriber1
+// //Subscriber1
 // data1=this.mySubject.subscribe((result)=>console.log('sub1'+result))
 // data=this.mySubject.next(2020)
 
-//Subscriber2
+// //Subscriber2
 // data2=this.mySubject.subscribe((result)=>console.log('sub2'+result))//return nothing
 
 

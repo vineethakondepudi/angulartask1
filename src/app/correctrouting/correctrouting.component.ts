@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class CorrectroutingComponent {
   constructor(private route:Router){}
  navigate(){
- this.route.navigate(['about'])
+ this.route.navigate(['pipe'])
  }
+ 
 }

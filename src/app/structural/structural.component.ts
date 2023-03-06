@@ -7,17 +7,17 @@ import { Component } from '@angular/core';
 })
 export class StructuralComponent {
   //NgIf
-// show=true;
+show:boolean=true;
 
 //NgFor
-// names=['vinnu','sai','koti']
+names=['vinnu','sai','koti']
 
 //NgSwitch
 num1:number=6;
 num2:number=10;
+name:string='vineetha';
 
 //Ngswitch
-op:string='red';
 colors:boolean=true;
-color:string="";
+color:string="red";
 }

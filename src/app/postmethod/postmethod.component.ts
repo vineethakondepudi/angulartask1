@@ -27,9 +27,17 @@ addStudent =new FormGroup({
 })
   
   saveDate(){
+  console.warn(this.postForm.value);
+  let data={
+    "sid":this.postForm.controls['sid'].value,
+    "sname":this.postForm.controls['sname'].value,
+    "department":this.postForm.controls['department'].value,
+    "phonenumber":this.postForm.controls['phonenumber'].value,
+  }
+  console.log(data);
   
-    this.student.saveStudentData(this.addStudent.value).subscribe((result)=>{
-   console.log(this.addStudent);
+    this.student.saveStudentData(data).subscribe((result:any)=>{
+   console.log(result);
    
       
     })

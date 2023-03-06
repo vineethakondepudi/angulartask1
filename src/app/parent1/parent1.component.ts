@@ -7,8 +7,7 @@ import { Component,EventEmitter,Input,Output } from '@angular/core';
 })
 export class Parent1Component {
   parenttochild='';
-  childtoparent='';
-  receivedmsg(msg:any){
-    this.childtoparent=msg;
+  recivedmsg(msg:any){
+    this.parenttochild=msg;
   }
 }

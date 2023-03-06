@@ -26,7 +26,6 @@ import { AdminHomechildGuard } from './guards/admin-homechild.guard';
 import { FormdeactiveComponent } from './formdeactive/formdeactive.component';
 import{HttpClientModule, HTTP_INTERCEPTORS}from '@angular/common/http'
 import { AdmindeactiveGuard } from './guards/admindeactive.guard';
-import { DataserviceComponent } from './dataservice/dataservice.component';
 import { DatauserComponent } from './datauser/datauser.component';
 import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab 
 import {InputTextModule} from 'primeng/inputtext';
@@ -54,7 +53,14 @@ import {ChartModule} from 'primeng/chart';
 import { GetmethodComponent } from './getmethod/getmethod.component';
 import { LifeCycleHookParentComponent } from './life-cycle-hook-parent/life-cycle-hook-parent.component';
 import { LifeCycleHookChildComponent } from './life-cycle-hook-child/life-cycle-hook-child.component';
-
+import { LoginFormComponent } from './lazyloadingtask/login-form/login-form.component';
+import { RegisterComponent } from './lazyloadingtask/register/register.component';
+import { MediaqueriesComponent } from './mediaqueries/mediaqueries.component';
+import {MatIconModule} from '@angular/material/icon';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { DatabindingComponent } from './databinding/databinding.component';
+import { ApicomponentComponent } from './apicomponent/apicomponent.component';
+import { AttributeDirectiveComponent } from './attribute-directive/attribute-directive.component';
 
 
 
@@ -84,7 +90,6 @@ const appRoutes: Routes=[
         Student2Component,
         ObservableComponent,
         FormdeactiveComponent,
-        DataserviceComponent,
         DatauserComponent,
         PostmethodComponent,
         GetmethodComponent,
@@ -101,11 +106,20 @@ const appRoutes: Routes=[
         ChartsComponent,
         LifeCycleHookParentComponent,
         LifeCycleHookChildComponent,
+        LoginFormComponent,
+        RegisterComponent,
+        MediaqueriesComponent,
+        DatabindingComponent,
+        ApicomponentComponent,
+        AttributeDirectiveComponent
+       
+        
 
 
     ],
     providers: [AdiminHomeGuard, StudentserviceService, AdminHomechildGuard, AdmindeactiveGuard,
-        { provide: HTTP_INTERCEPTORS, useClass: HeadersInterceptor, multi: true },],
+        { provide: HTTP_INTERCEPTORS, useClass: HeadersInterceptor, multi: true },FlexLayoutModule
+    ],
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
@@ -121,7 +135,9 @@ const appRoutes: Routes=[
         BrowserAnimationsModule,
         MatSlideToggleModule,
         LazyloadingModule,
-        ChartModule
+        ChartModule,
+        MatIconModule,
+        FlexLayoutModule
         
     ]
 })

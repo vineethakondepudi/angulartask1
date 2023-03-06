@@ -1,6 +1,5 @@
 import { Component} from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-reactiveform',
@@ -10,18 +9,25 @@ import { Router } from '@angular/router';
 export class ReactiveformComponent {
 
   signupForm: FormGroup;
-  constructor(public fb: FormBuilder) {
+  constructor(public fb: FormBuilder,public router:Router) {
     this.signupForm = this.fb.group({
       name: [''],
       email: [''],    
       password: [''],
     });
-  }
 
+
+
+    
+  }
+  
   registerUser() {
     
       console.log(this.signupForm.value);
       
     
+  }
+  show(){
+    this.router.navigate(['fb'])
   }
 }

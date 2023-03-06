@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdiminHomeGuard } from './adimin-home.guard';
 import { CorrectroutingComponent } from './correctrouting/correctrouting.component';
+import { DeactiveGuard } from './deactive.guard';
 import { EditComponent } from './edit/edit.component';
 import { FormBuilderComponent } from './form-builder/form-builder.component';
+import { FormComponent } from './form/form.component';
 import { FormdeactiveComponent } from './formdeactive/formdeactive.component';
 import { AdminHomechildGuard } from './guards/admin-homechild.guard';
 import { AdmindeactiveGuard } from './guards/admindeactive.guard';
@@ -23,8 +25,8 @@ const routes: Routes = [
 {path:'patch',component:PatchmethodComponent},
 {path:'student',component:Student1Component},
  {path:'qqq',component:CorrectroutingComponent,canActivate:[AdiminHomeGuard]},
- {path:'about',component:PipesComponent,canActivateChild:[AdminHomechildGuard]},
- {path:'deactive',component:FormdeactiveComponent,canDeactivate:[AdmindeactiveGuard],
+ {path:'pipe',component:PipesComponent,canActivateChild:[AdminHomechildGuard]},
+ {path:'form',component:FormComponent,canDeactivate:[DeactiveGuard],
 
 children:[
   {path:'reactive',component:ReactiveformComponent},
@@ -33,6 +35,8 @@ children:[
   
 ]},
 { path: 'lazyloading', loadChildren: () => import('./lazyloading/lazyloading.module').then(m => m.LazyloadingModule) },
+ 
+{ path: 'lazyloadingtask', loadChildren: () => import('./lazyloadingtask/lazylaodingtask/lazylaodingtask.module').then(m => m.LazylaodingtaskModule) },
 
 ];
 

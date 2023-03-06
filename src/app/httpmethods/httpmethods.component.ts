@@ -30,8 +30,8 @@ item: any;
     edit(data:any){
       
 this.router.navigateByUrl('/putdata');
-localStorage.setItem('name',JSON.stringify(data))
-  //  this.student.behav.next(data)
+// localStorage.setItem('name',JSON.stringify(data))
+   this.student.behav.next(data)
        console.log(data,'Hello');
      
      

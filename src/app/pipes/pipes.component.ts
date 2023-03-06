@@ -11,6 +11,6 @@ a:any='vineetha';
 constructor(private rotes:Router){}
 
 navigate1(){
-  this.rotes.navigateByUrl('about/fb')
+  this.rotes.navigateByUrl('form')
 }
 }

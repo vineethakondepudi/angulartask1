@@ -10,10 +10,12 @@ export class Child1Component{
   @Input()
   name:any
  
+
   @Output()
-  childtoparentEmitter=new EventEmitter
-  childtoparent(m:any){
-        this.childtoparentEmitter.emit(m.target.value)
+  parenttochildEmitter=new EventEmitter
+  parenttochild(m:any){
+    this.parenttochildEmitter.emit(m.target.value)
   }
+  
   constructor(){}
 }

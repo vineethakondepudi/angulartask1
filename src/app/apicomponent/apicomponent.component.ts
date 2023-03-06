@@ -8,7 +8,7 @@ import { ApiserviceService } from '../apiservice.service';
 export class ApicomponentComponent {
 resul:any;
 constructor(private user:ApiserviceService){
-  this.user.getDate().subscribe(data=>{
+  this.user.getmethod().subscribe(data=>{
     this.resul=JSON.stringify(data);
     console.log(this.resul);
     

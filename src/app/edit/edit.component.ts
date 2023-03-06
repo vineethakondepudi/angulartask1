@@ -24,25 +24,25 @@ export class EditComponent implements OnInit{
 
   }
   ngOnInit(): void {
-     var x=JSON.parse(localStorage.getItem('name') || '')
-     this.postForm.controls['sid'].patchValue(x.sid)
-     this.postForm.controls['sname'].patchValue(x.sname)
-     this.postForm.controls['department'].patchValue(x.department)
-     this.postForm.controls['phonenumber'].patchValue(x.phonenumber)
-    // this.student.behav.subscribe((x)=>
-    // {
-      // this.postForm.controls['sid'].setValue(x.sid)
-      // this.postForm.controls['sname'].setValue(x.sname)
-      // this.postForm.controls['department'].setValue(x.department)
-      // this.postForm.controls['phonenumber'].setValue(x.phonenumber)
-    // })
+    //  var x=JSON.parse(localStorage.getItem('name') || '')
+    //  this.postForm.controls['sid'].patchValue(x.sid)
+    //  this.postForm.controls['sname'].patchValue(x.sname)
+    //  this.postForm.controls['department'].patchValue(x.department)
+    //  this.postForm.controls['phonenumber'].patchValue(x.phonenumber)
+    this.student.behav.subscribe((x)=>
+    {
+      this.postForm.controls['sid'].setValue(x.sid)
+      this.postForm.controls['sname'].setValue(x.sname)
+      this.postForm.controls['department'].setValue(x.department)
+      this.postForm.controls['phonenumber'].setValue(x.phonenumber)
+    })
   }
    submit(){
     // this.student.updateStudent(data).subscribe((res:any)=>{
     //   console.log(res);
       
     // })
-    {
+    // {
       let data={
       "sid":this.postForm.controls['sid'].value,
       "sname":this.postForm.controls['sname'].value,
@@ -51,7 +51,7 @@ export class EditComponent implements OnInit{
       }
       console.log(data,"updated data")
       this.student.updateStudent(data).subscribe((e)=>e)
-   }
+  //  }
 // editt:any
 
 }
